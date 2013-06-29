@@ -35,7 +35,7 @@
 			<div layout:fragment="content"></div>
 			<div th:substituteby="${page.subPage(pageName,sect.name)} :: article">
 				Contents</div>
-			<a href="#index" th:if="${sect.name != 'index'}" class="to_index">▲目次</a>
+			<a href="#index" data-ajax="false" th:if="${sect.name != 'index'}" class="to_index">▲目次</a>
 		</div>
 	</div>
 </body>
