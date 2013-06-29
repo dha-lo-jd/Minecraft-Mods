@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="utf-8" />
+<title>┃━┏┃(かを) の ﾓｯﾖ置き場</title>
+<meta content="┃━┏┃(かを) の ﾓｯﾖ置き場" name="description" />
+<meta content="text/javascript" http-equiv="Content-Script-type" />
+<meta content="text/css" http-equiv="Content-Style-type" />
+<link href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" rel="stylesheet" />
+<script src="http://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js" type="text/javascript"></script>
+<link href="site/css/site.css" media="all" rel="stylesheet" type="text/css" />
+<script src="site/js/site.js" type="text/javascript"></script>
+<link href="site/index.css" media="all" rel="stylesheet" type="text/css" />
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', '//www.google-analytics.com/analytics.js',
+			'ga');
+
+	ga('create', 'UA-42083488-1', 'dha-lo-jd.github.io');
+	ga('send', 'pageview');
+</script>
+</head><body>
+	<div data-role="page">
+		<a id="page-top"></a>
+		<header>
+        <h1>┃━┏┃(かを) の ﾓｯﾖ置き場</h1>
+    </header>
+		
+		
+			<section>
+				
+		<article data-collapsed="false" data-content-theme="d" data-role="collapsible" data-theme="c">
+			<h3>かをCommons(littleMaidMob拡張API)</h3>
+			このサイトのMODの前提MOD兼、littleMaidMobにいくつかの機能とAPIを(無理矢理)追加するMODです。
+		</article>
+		<div>
+		<div data-collapsed="false" data-role="collapsible" data-theme="c" data-content-theme="d">
+			<h1>
+				<a id="index"></a>
+				目次
+			</h1>
+			
+				<hgroup>
+					
+						<h3>
+							
+		<a href="#updates">更新履歴</a>
+	
+						</h3>
+						
+		
+					
+						<h3>
+							
+		<a href="#description">解説</a>
+	
+						</h3>
+						
+		
+					
+						<h3>
+							
+		<a href="#download">ダウンロード</a>
+	
+						</h3>
+						
+		
+					
+					</hgroup>
+			
+			
+			
+		</div>
+	</div>
+	</section>
+		
+			<section>
+				
+		<div>
+		<div data-collapsed="false" data-role="collapsible" data-theme="c" data-content-theme="c">
+			<h1>
+				<a id="updates"></a>
+				更新履歴
+			</h1>
+			
+				<article data-collapsed="false" data-content-theme="d" data-role="collapsible" data-theme="c">
+					<h3>0.0.1</h3>
+					<div>
+        <article>
+        公開<br />
+        </article>
+    </div>
+				</article>
+				<article data-content-theme="d" data-role="collapsible" data-theme="c">
+					<h3>過去の更新履歴</h3>
+					
+						
+					
+				</article>
+			
+			
+			<a class="to_index" href="#index">▲目次</a>
+		</div>
+	</div>
+	</section>
+		
+			<section>
+				
+		<div>
+		<div data-collapsed="false" data-role="collapsible" data-theme="b" data-content-theme="c">
+			<h1>
+				<a id="description"></a>
+				解説
+			</h1>
+			
+				<article>
+					追々書き足していきます…。<br />
+					<article data-content-theme="d" data-role="collapsible" data-theme="c">
+						<h3>前提環境</h3>
+						Minecraft 1.5.2<br /> MinecraftForge 1.5.2-7.8.0.737<br />
+						MMMLib 1.5.2-6a<br /> LittleMaidMob 1.5.2-5<br />
+					</article>
+					<article data-content-theme="d" data-role="collapsible" data-theme="c">
+						<h3>インストール</h3>
+						ダウンロードしたファイルをmodsに置いて下さい。<br /> 初期状態では、「アンインストール状態」になっていますので、<br />
+						コンフィグを開き「enableUninstallMode=false」にしてModを有効化して下さい。<br />
+						<article data-content-theme="d" data-role="collapsible" data-theme="c">
+							<h3>！注意！アンインストール</h3>
+							当MODをアンインストールする際、必ずコンフィグを開き「enableUninstallMode=true」にして、<br />
+							「アンインストール状態」にしてから一度Minecraftを起動し、その後Minecraftを終了させてから、<br />
+							MODを削除して下さい。<br />
+							上記手順を行わずにMODを削除してワールドを読み込んだ場合、全てのスポーン済みのメイドさんが消滅します。
+						</article>
+					</article>
+					<article data-content-theme="d" data-role="collapsible" data-theme="c">
+						<h3>使い方</h3>
+						<article data-content-theme="d" data-role="collapsible" data-theme="c">
+							<h3>書ける本による指示</h3>
+							書ける本に書式に従って各種指示を書き、その本を持った状態でメイドさんを右クリックすると<br />
+							様々な指示を与えることができます。
+							<article data-content-theme="d" data-role="collapsible" data-theme="c">
+								<h3>書式</h3>
+								[コマンド],[引数],[引数];<br /> 複数行に渡って記載できます。<br />
+								コマンドの大文字小文字は無視されます。<br /> 「;」は単一の指示を記載する場合、省略可能です。<br />
+							</article>
+							<article data-content-theme="d" data-role="collapsible" data-theme="c">
+								<h3>モード変更指示</h3>
+								mode,[モード名]<br /> もしくは<br /> m,[モード名]<br /> <br />
+								契約中で、待機中"でない"メイドさんのモードを[モード名]で指定されたモードに変更します。<br />
+								各モード割り当てられた[モード名]は以下のとおりです。<br /> 従者：「Escorter」もしくは「Es」<br />
+								フェンサー：「Fencer」もしくは「Fe」<br /> アーチャー：「Archer」もしくは「Ar」<br />
+								お料理：「Cooking」もしくは「Co」<br /> ヒーラー：「Healer」もしくは「He」<br />
+								薬剤師：「Pharmacist」もしくは「Ph」<br /> 毛刈り：「Ripper」もしくは「Ri」<br />
+								トーチャー：「Torcher」もしくは「To」<br /> <br /> 他にもあるかも…？<br />
+							</article>
+						</article>
+						<article data-content-theme="d" data-role="collapsible" data-theme="c">
+							<h3>砂糖カウント</h3>
+							メイドさんにカーソルを合わせると現在所持している砂糖の量を表示します。<br />
+							非表示にしたい場合はコンフィグからOFFに出来ます。(SugarCountVisible=false)
+						</article>
+						<article data-content-theme="d" data-role="collapsible" data-theme="c">
+							<h3>拡張API(開発者向け)</h3>
+							追加したモードの専用GUIを開く、interactを完全に上書きする、などなど。<br />
+							基本的には(とても読みづらい)ソースを見てね。<br /> ニーズがありそうなら解説を書いていきます。<br />
+						</article>
+					</article>
+				</article>
+			
+			
+			<a class="to_index" href="#index">▲目次</a>
+		</div>
+	</div>
+	</section>
+		
+			<section>
+				
+		<div>
+		<div data-collapsed="false" data-role="collapsible" data-theme="c" data-content-theme="c">
+			<h1>
+				<a id="download"></a>
+				ダウンロード
+			</h1>
+			
+				<article data-collapsed="false" data-content-theme="d" data-role="collapsible" data-theme="c">
+					<h3>for 1.5.2</h3>
+							<a href="EntityMode_Kawo_LMM_Extension-1.5.2-0.0.1.zip">v0.0.1</a>
+				</article>
+			
+			
+			<a class="to_index" href="#index">▲目次</a>
+		</div>
+	</div>
+	</section>
+		
+	
+		<footer>
+        <a href="#page-top"><p>↑ページ上部に戻る</p></a>
+        <address>Copyright © 2013 dha_lo_jd All rights reserved.</address>
+        <p>このサイトはGoogle Analyticsを利用してサイト訪問者の統計情報を解析しています。</p>
+    </footer>
+	</div>
+</body></html>

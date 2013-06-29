@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>Unofficial MCP support plugin for Eclipse</title>
+<meta name="description"
+	content="Eclipseを使ったMCPによるMOD開発をサポートするプラグインの説明書" />
+<meta http-equiv="Content-Script-type" content="text/javascript" />
+<meta http-equiv="Content-Style-type" content="text/css" />
+<link rel="stylesheet" href="site/css/site.css" type="text/css"
+	media="all" />
+</head>
+<body>
+	<div th:fragment="name" th:remove="tag">ダウンロード</div>
+	<div layout:fragment="article" th:remove="tag">
+		<div
+			layout:include="(${page.findResourceAsString('elements/sections')}) :: content"
+			th:with="theme='c',contentTheme='c'">
+			<div layout:fragment="content" th:remove="tag">
+				<article data-role="collapsible" data-theme="c"
+					data-content-theme="d" data-collapsed="false">
+					<h3>for 1.5.2</h3>
+							<a href="EntityMode_HouseKeeper-1.5.2-0.0.1.zip">v0.0.1</a>
+				</article>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>Unofficial MCP support plugin for Eclipse</title>
+<meta name="description"
+	content="Eclipseを使ったMCPによるMOD開発をサポートするプラグインの説明書" />
+<meta http-equiv="Content-Script-type" content="text/javascript" />
+<meta http-equiv="Content-Style-type" content="text/css" />
+<link rel="stylesheet" href="site/css/site.css" type="text/css"
+	media="all" />
+</head>
+<body>
+	<div th:fragment="name" th:remove="tag">解説</div>
+	<div layout:fragment="article" th:remove="tag">
+		<div
+			layout:include="(${page.findResourceAsString('elements/sections')}) :: content"
+			th:with="theme='b',contentTheme='c'">
+			<div layout:fragment="content" th:remove="tag">
+				<article>
+					追々書き足していきます…。<br />
+					<article data-role="collapsible" data-theme="c"
+						data-content-theme="d">
+						<h3>前提環境</h3>
+						Minecraft 1.5.2<br /> MinecraftForge 1.5.2-7.8.0.737<br />
+						MMMLib 1.5.2-6a<br /> LittleMaidMob 1.5.2-5<br /> かをCommons
+						1.5.2-5<br />
+					</article>
+					<article data-role="collapsible" data-theme="c"
+						data-content-theme="d">
+						<h3>インストール</h3>
+						ダウンロードしたファイルをmodsに置いて下さい。<br />
+					</article>
+					<article data-role="collapsible" data-theme="c"
+						data-content-theme="d">
+						<h3>メイド長のお仕事</h3>
+						<article data-role="collapsible" data-theme="c"
+							data-content-theme="d">
+							<h3>メイド長にする</h3>
+							かをCommonsの機能によって追加される「書ける本での指示」の「モード変更」によってメイド長モードに変更します。<br />
+							モード名は「HouseKeeper」もしくは「hk」となります。 書ける本に書く指示としては、<br /> m,hk;<br />
+							のようになります。
+						</article>
+						<article data-role="collapsible" data-theme="c"
+							data-content-theme="d">
+							<h3>村常駐</h3>
+							村の付近でFreedomモードにすることで、メイド長がその村に常駐して、色々とお世話をします。<br />
+							常駐しているメイド長は、まず村の中心を目指して移動します。(ワープ起点も村の中心に近づいていきます)<br />
+							<article data-role="collapsible" data-theme="c"
+								data-content-theme="d">
+								<h3>村人カウントアイコン</h3>
+								村に常駐しているメイド長にカーソルを合わせると、村人の人数をアイコンで表示します。<br />
+								村人にドアのアイコンです。(村人じゃない…？鼻デカ…？チェインバー！彼はなんと言っている？)<br />
+							</article>
+							<article data-role="collapsible" data-theme="c"
+								data-content-theme="d">
+								<h3>村人教育計画</h3>
+								メイド長のインベントリの左上スロットに「紙」を置くと、メイド長の「恐るべき子供達計画」について書いてくれます。<br />
+								具体的には、常駐している村の村人数、メイド数、子供の数、教育可能な子供の数(村人を増やす必要が有る場合は、教育に必要な村人数)を表示します。<br />
+							</article>
+							<article data-role="collapsible" data-theme="c"
+								data-content-theme="d">
+								<h3>村人教育</h3>
+								村人の子供を一定の割合でメイドさんとして教育し、メイドさんにします。<br />
+								メイドさんにする割合はコンフィグから変更できます。
+							</article>
+						</article>
+						<article data-role="collapsible" data-theme="c"
+							data-content-theme="d">
+							<h3>メイド管理</h3>
+							メイド長たるもの部下の管理はお手のものです。<br />
+							<article data-role="collapsible" data-theme="c"
+								data-content-theme="d">
+								<h3>メイドさんカウントアイコン</h3>
+								メイド長にカーソルを合わせると、管理下にあるメイドさんの人数をアイコンで表示します。<br />
+							</article>
+							<article data-role="collapsible" data-theme="c"
+								data-content-theme="d">
+								<h3>メイドさん一覧GUI</h3>
+								メイド長のインベントリを開き、右下にあるタブを切り替えることで、「メイドさん一覧」が開きます。<br />
+								管理下にあるメイドさんを一覧表示し、「N(名前順)」「J(職種順)」「M(モード(追従→Freedom→Tracer→Wait→野生)順)」「D(プレイヤーからの距離順)」<br />
+								の各ボタンでそれぞれソートすることができます。<br /> 今のところ一覧で表示出来るだけです。<br />
+							</article>
+						</article>
+					</article>
+				</article>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>Unofficial MCP support plugin for Eclipse</title>
+<meta name="description"
+	content="Eclipseを使ったMCPによるMOD開発をサポートするプラグインの説明書" />
+<meta http-equiv="Content-Script-type" content="text/javascript" />
+<meta http-equiv="Content-Style-type" content="text/css" />
+<link rel="stylesheet" href="site/css/site.css" type="text/css"
+	media="all" />
+</head>
+<body>
+	<div th:fragment="name" th:remove="tag">利用規約・免責事項</div>
+	<p th:fragment="sections"
+		th:substituteby="(${page.findResourceAsString('elements/sections')}) :: index_section" />
+	<div layout:fragment="article" th:remove="tag">
+		<div
+			layout:include="(${page.findResourceAsString('elements/sections')}) :: content"
+			th:with="theme='e',contentTheme='e'">
+			<div layout:fragment="content" th:remove="tag">
+				<article>
+					<article data-role="collapsible" data-theme="e"
+						data-collapsed="false" data-content-theme="e">
+						<h3>ライセンス</h3>
+						このサイトで配布されているMODはすべてMinecraft Mod Public
+						License(以下MMPL)によってライセンスされています。 各MODに同梱のMMPL-1.0.txtをご確認下さい。
+					</article>
+					<article data-role="collapsible" data-theme="e"
+						data-collapsed="false" data-content-theme="e">
+						<h3>連絡方法</h3>
+						<a href="http://forum.minecraftuser.jp/">マインクラフト非公式フォーラム</a>に<a
+							href="http://forum.minecraftuser.jp/viewtopic.php?f=13&t=5406">トピック</a>を立てさせてもらっています。<br />
+						質問や不具合のご連絡はそちらにお願いします。<br />
+						なお、理解不能な内容、明らかに当サイトの説明を読んでいない内容を除き、極力返信しますが、必ず返信できるわけではありませんのでご了承下さい。<br />
+					</article>
+				</article>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

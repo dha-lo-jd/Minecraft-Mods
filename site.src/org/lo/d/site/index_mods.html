@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>Unofficial MCP support plugin for Eclipse</title>
+<meta name="description"
+	content="Eclipseを使ったMCPによるMOD開発をサポートするプラグインの説明書" />
+<meta http-equiv="Content-Script-type" content="text/javascript" />
+<meta http-equiv="Content-Style-type" content="text/css" />
+<link rel="stylesheet" href="site/css/site.css" type="text/css"
+	media="all" />
+</head>
+<body>
+	<div th:fragment="name" th:remove="tag">MOD</div>
+	<div layout:fragment="article" th:remove="tag">
+		<div
+			layout:include="(${page.findResourceAsString('elements/sections')}) :: content"
+			th:with="theme='b',contentTheme='c'">
+			<div layout:fragment="content" th:remove="tag">
+				<article class="mods">
+					制作したMODです。<br />
+					<section>
+						<h3>
+							<a href="/site/mods/kawo_commons/">	かをCommons(littleMaidMob拡張API)</a>
+						</h3>
+						このサイトのMODの前提MOD兼、littleMaidMobにいくつかの機能とAPIを(無理矢理)追加するMODです。
+					</section>
+					<section>
+						<h3>
+							<a href="/site/mods/mod_hk/">メイド長MOD</a>
+						</h3>
+						littleMaidMobの派生MODです。 <br />
+						完璧(なドジ)で瀟洒な(つもりの)メイド長を追加します。
+					</section>
+					<hr />
+				</article>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

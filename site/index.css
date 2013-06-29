@@ -1,0 +1,14 @@
+.scroll_box {
+	height: 150px;
+	overflow: auto;
+}
+
+.mods h3 {
+	margin: 2px;
+}
+
+.mods section {
+	margin-top: 16px;
+	padding-top: 8px;
+	border-top: 1px solid;
+}

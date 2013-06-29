@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" lang="ja">
+<head th:fragment="substituteby">
+<meta charset="utf-8" />
+<title>┃━┏┃(かを) の ﾓｯﾖ置き場</title>
+<meta name="description"
+	content="┃━┏┃(かを) の ﾓｯﾖ置き場" />
+<meta http-equiv="Content-Script-type" content="text/javascript" />
+<meta http-equiv="Content-Style-type" content="text/css" />
+<link rel="stylesheet"
+	href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript"
+	src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<link rel="stylesheet" href="site/css/site.css" type="text/css"
+	media="all" />
+<script type="text/javascript" src="site/js/site.js"></script>
+<link rel="stylesheet" href="page.css" type="text/css" media="all"
+	th:href="${page.copyToResource(pageName,'css')}"
+	th:if="${page.findResourceAsString(pageName,'css')}" />
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', '//www.google-analytics.com/analytics.js',
+			'ga');
+
+	ga('create', 'UA-42083488-1', 'dha-lo-jd.github.io');
+	ga('send', 'pageview');
+</script>
+</head>
+<body>HEAD
+</body>
+</html>
