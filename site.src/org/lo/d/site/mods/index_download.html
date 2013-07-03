@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>Unofficial MCP support plugin for Eclipse</title>
+<meta name="description"
+	content="Eclipseを使ったMCPによるMOD開発をサポートするプラグインの説明書" />
+<meta http-equiv="Content-Script-type" content="text/javascript" />
+<meta http-equiv="Content-Style-type" content="text/css" />
+<link rel="stylesheet" href="site/css/site.css" type="text/css"
+	media="all" />
+</head>
+<body>
+	<div th:fragment="name" th:remove="tag">ダウンロード</div>
+	<div layout:fragment="article" th:remove="tag">
+		<div
+			layout:include="(${page.findResourceAsString('elements/sections')}) :: content"
+			th:with="theme='b',contentTheme='c'">
+			<div layout:fragment="content" th:remove="tag">
+				<article data-role="collapsible" data-theme="c"
+					data-content-theme="d" data-collapsed="false">
+					<h3>最新バージョン</h3>
+					<div th:each="mcVersion : ${page.mods.minecraftVersions}"
+						th:remove="tag">
+						<article data-role="collapsible" data-theme="c"
+							data-content-theme="d" data-collapsed="false"
+							th:object="${page.mods.getFirst(mcVersion)}"
+							th:if="${page.mods.getFirst(mcVersion)}">
+							<h3>
+								<span th:text="'for Minecraft ' + ${mcVersion}" th:remove="tag">バージョン番号</span>
+							</h3>
+							<a href="#modfile" th:href="*{fileName}" data-ajax="false"
+								th:onclick="'ga(\'send\', \'event\', \'' + *{modName} + '\', \'' + ${mcVersion} + '\',\'' + *{version} + '\');'"
+								th:text="'Ver ' + *{version}">v0.0.2</a><br />
+						</article>
+					</div>
+				</article>
+				<article data-role="collapsible" data-theme="c"
+					data-content-theme="a">
+					<h3>過去のバージョン</h3>
+					<div th:each="mcVersion : ${page.mods.minecraftVersions}"
+						th:remove="tag">
+						<article data-role="collapsible" data-theme="a"
+							data-content-theme="c">
+							<h3>
+								<span th:text="'for Minecraft ' + ${mcVersion}" th:remove="tag">バージョン番号</span>
+							</h3>
+							<br />
+							<div th:each="update : ${page.mods.modFiles.get(mcVersion)}"
+								th:remove="tag">
+								<div th:unless="${page.mods.isFirst(update)}" th:remove="tag">
+									<a href="#modfile" th:href="${update.fileName}"
+										data-ajax="false"
+										th:onclick="'ga(\'send\', \'event\', \'' + ${update.modName} + '\', \'' + ${mcVersion} + '\',\'' + ${update.version} + '\');'"
+										th:text="'Ver ' + ${update.version}">v0.0.2</a><br /> <br />
+								</div>
+							</div>
+						</article>
+					</div>
+				</article>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
