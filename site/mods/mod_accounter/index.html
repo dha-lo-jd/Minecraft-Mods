@@ -38,12 +38,9 @@
 			<section>
 				
 		<article data-collapsed="false" data-content-theme="d" data-role="collapsible" data-theme="c">
-			<h3>メイド長MOD</h3>
-			littleMaidMobの派生MODです。 <br /> メイドさんに完璧(なドジ)で瀟洒な(つもりの)メイド長モードを追加します。
-		</article>
-		<article data-collapsed="false" data-content-theme="e" data-role="collapsible" data-theme="e">
-			<h3>謝辞</h3>
-			MOD制作に当たって、 あじ さんから村人カウントアイコン用の画像を制作して頂きました。<br /> ありがとうございます。
+			<h3>経理メイドMOD</h3>
+			littleMaidMobの派生MODです。 <br />
+			メイドさんに、メイドさんの生命線である砂糖を配り気を配る、経理モードを追加します。
 		</article>
 		<div>
 		<div data-collapsed="false" data-role="collapsible" data-theme="c" data-content-theme="d">
@@ -96,42 +93,16 @@
 			</h1>
 			
 				<article data-collapsed="false" data-content-theme="d" data-role="collapsible" data-theme="c">
-					<h3>0.0.3</h3>
+					<h3>0.0.1</h3>
 					<div>
         <article>
-        紙を持たせても教育計画が表示されない場合があるのを修正。<br />
+        公開<br />
         </article>
     </div>
 				</article>
 				<article data-content-theme="d" data-role="collapsible" data-theme="c">
 					<h3>過去の更新履歴</h3>
 					
-						
-					
-						
-							<article data-content-theme="d" data-role="collapsible" data-theme="c">
-								<h3>
-									0.0.2
-								</h3>
-								<div>
-        <article>
-        NEIとの競合を解消<br />
-        </article>
-    </div>
-							</article>
-						
-					
-						
-							<article data-content-theme="d" data-role="collapsible" data-theme="c">
-								<h3>
-									0.0.1
-								</h3>
-								<div>
-        <article>
-        公開<br />
-        </article>
-    </div>
-							</article>
 						
 					
 				</article>
@@ -164,46 +135,30 @@
 						ダウンロードしたファイルをmodsに置いて下さい。<br />
 					</article>
 					<article data-content-theme="d" data-role="collapsible" data-theme="c">
-						<h3>メイド長のお仕事</h3>
+						<h3>経理メイドのお仕事</h3>
 						<article data-content-theme="d" data-role="collapsible" data-theme="c">
-							<h3>メイド長にする</h3>
+							<h3>経理モードにする</h3>
 							かをCommonsの機能によって追加される「書ける本での指示」の「モード変更」によってメイド長モードに変更します。<br />
-							モード名は「HouseKeeper」もしくは「hk」となります。 書ける本に書く指示としては、<br /> m,hk;<br />
+							モード名は「Accounter」もしくは「ac」となります。 書ける本に書く指示としては、<br /> m,ac;<br />
 							のようになります。
 						</article>
 						<article data-content-theme="d" data-role="collapsible" data-theme="c">
-							<h3>村常駐</h3>
-							村の付近でFreedomモードにすることで、メイド長がその村に常駐して、色々とお世話をします。<br />
-							常駐しているメイド長は、まず村の中心を目指して移動します。(ワープ起点も村の中心に近づいていきます)<br />
-							<article data-content-theme="d" data-role="collapsible" data-theme="c">
-								<h3>村人カウントアイコン</h3>
-								村に常駐しているメイド長にカーソルを合わせると、村人の人数をアイコンで表示します。<br />
-								村人にドアのアイコンです。(村人じゃない…？鼻デカ…？チェインバー！彼はなんと言っている？)<br />
-							</article>
-							<article data-content-theme="d" data-role="collapsible" data-theme="c">
-								<h3>村人教育計画</h3>
-								メイド長のインベントリの左上スロットに「紙」を置くと、メイド長の「恐るべき子供達計画」について書いてくれます。<br />
-								具体的には、常駐している村の村人数、メイド数、子供の数、教育可能な子供の数(村人を増やす必要が有る場合は、教育に必要な村人数)を表示します。<br />
-							</article>
-							<article data-content-theme="d" data-role="collapsible" data-theme="c">
-								<h3>村人教育</h3>
-								村人の子供を一定の割合でメイドさんとして教育し、メイドさんにします。<br />
-								メイドさんにする割合はコンフィグから変更できます。
-							</article>
+							<h3>給与管理</h3>
+							経理メイドさんのお仕事は基本的にたった一つ…「砂糖を管理して支配する」それだけです。<br />
+							最初にコンフィグ値である「砂糖の必要数」(デフォルト64個)分の砂糖を所持していないメイドさんに対して配ります。<br />
+							その後、経理メイドさん自身が必要数を確保するまで、各メイドさんから1個ずつ徴収していきます。<br />
+							つまり、経理メイドさんは自分の必要数分は必ず確保します。役得役得。<br />
 						</article>
 						<article data-content-theme="d" data-role="collapsible" data-theme="c">
-							<h3>メイド管理</h3>
-							メイド長たるもの部下の管理はお手のものです。<br />
-							<article data-content-theme="d" data-role="collapsible" data-theme="c">
-								<h3>メイドさんカウントアイコン</h3>
-								メイド長にカーソルを合わせると、管理下にあるメイドさんの人数をアイコンで表示します。<br />
-							</article>
-							<article data-content-theme="d" data-role="collapsible" data-theme="c">
-								<h3>メイドさん一覧GUI</h3>
-								メイド長のインベントリを開き、右下にあるタブを切り替えることで、「メイドさん一覧」が開きます。<br />
-								管理下にあるメイドさんを一覧表示し、「N(名前順)」「J(職種順)」「M(モード(追従→Freedom→Tracer→Wait→野生)順)」「D(プレイヤーからの距離順)」<br />
-								の各ボタンでそれぞれソートすることができます。<br /> 今のところ一覧で表示出来るだけです。<br />
-							</article>
+							<h3>帳簿</h3>
+							経理メイドさんのインベントリに「紙」を置くと、裏のない、清廉潔白な砂糖管理の帳簿を見せてくれます。<br />
+							上から順に、<br />
+							「管理下のメイドさんの人数」<br />
+							「現在の合計砂糖所持数」<br />
+							「全員に必要分を配布した時の合計数」<br />
+							「不足している砂糖の数(赤字)」あるいは「剰余分の砂糖の数」<br />
+							「最も砂糖の所持数が少ないメイドさんの現在の所持数」<br />
+							となっています。
 						</article>
 					</article>
 				</article>
@@ -230,7 +185,7 @@
 							<h3>
 								for Minecraft 1.5.2
 							</h3>
-							<a data-ajax="false" href="EntityMode_HouseKeeper-1.5.2-0.0.3.zip" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;HouseKeeper&#39;, &#39;1.5.2&#39;,&#39;0.0.3&#39;);">Ver 0.0.3</a><br />
+							<a data-ajax="false" href="EntityMode_Accounter-1.5.2-0.0.1.zip" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Accounter&#39;, &#39;1.5.2&#39;,&#39;0.0.1&#39;);">Ver 0.0.1</a><br />
 						</article>
 					
 				</article>
@@ -243,14 +198,6 @@
 							</h3>
 							<br />
 							
-								
-							
-								
-									<a data-ajax="false" href="EntityMode_HouseKeeper-1.5.2-0.0.2.zip" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;HouseKeeper&#39;, &#39;1.5.2&#39;,&#39;0.0.2&#39;);">Ver 0.0.2</a><br /> <br />
-								
-							
-								
-									<a data-ajax="false" href="EntityMode_HouseKeeper-1.5.2-0.0.1.zip" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;HouseKeeper&#39;, &#39;1.5.2&#39;,&#39;0.0.1&#39;);">Ver 0.0.1</a><br /> <br />
 								
 							
 						</article>

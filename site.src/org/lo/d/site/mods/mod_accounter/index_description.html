@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>Unofficial MCP support plugin for Eclipse</title>
+<meta name="description"
+	content="Eclipseを使ったMCPによるMOD開発をサポートするプラグインの説明書" />
+<meta http-equiv="Content-Script-type" content="text/javascript" />
+<meta http-equiv="Content-Style-type" content="text/css" />
+<link rel="stylesheet" href="site/css/site.css" type="text/css"
+	media="all" />
+</head>
+<body>
+	<div th:fragment="name" th:remove="tag">解説</div>
+	<div layout:fragment="article" th:remove="tag">
+		<div
+			layout:include="(${page.findResourceAsString('elements/sections')}) :: content"
+			th:with="theme='b',contentTheme='c'">
+			<div layout:fragment="content" th:remove="tag">
+				<article>
+					追々書き足していきます…。<br />
+					<article data-role="collapsible" data-theme="c"
+						data-content-theme="d">
+						<h3>前提環境</h3>
+						Minecraft 1.5.2<br /> MinecraftForge 1.5.2-7.8.0.737<br />
+						MMMLib 1.5.2-6a<br /> LittleMaidMob 1.5.2-5<br /> かをCommons
+						1.5.2-5<br />
+					</article>
+					<article data-role="collapsible" data-theme="c"
+						data-content-theme="d">
+						<h3>インストール</h3>
+						ダウンロードしたファイルをmodsに置いて下さい。<br />
+					</article>
+					<article data-role="collapsible" data-theme="c"
+						data-content-theme="d">
+						<h3>経理メイドのお仕事</h3>
+						<article data-role="collapsible" data-theme="c"
+							data-content-theme="d">
+							<h3>経理モードにする</h3>
+							かをCommonsの機能によって追加される「書ける本での指示」の「モード変更」によってメイド長モードに変更します。<br />
+							モード名は「Accounter」もしくは「ac」となります。 書ける本に書く指示としては、<br /> m,ac;<br />
+							のようになります。
+						</article>
+						<article data-role="collapsible" data-theme="c"
+							data-content-theme="d">
+							<h3>給与管理</h3>
+							経理メイドさんのお仕事は基本的にたった一つ…「砂糖を管理して支配する」それだけです。<br />
+							最初にコンフィグ値である「砂糖の必要数」(デフォルト64個)分の砂糖を所持していないメイドさんに対して配ります。<br />
+							その後、経理メイドさん自身が必要数を確保するまで、各メイドさんから1個ずつ徴収していきます。<br />
+							つまり、経理メイドさんは自分の必要数分は必ず確保します。役得役得。<br />
+						</article>
+						<article data-role="collapsible" data-theme="c"
+							data-content-theme="d">
+							<h3>帳簿</h3>
+							経理メイドさんのインベントリに「紙」を置くと、裏のない、清廉潔白な砂糖管理の帳簿を見せてくれます。<br />
+							上から順に、<br />
+							「管理下のメイドさんの人数」<br />
+							「現在の合計砂糖所持数」<br />
+							「全員に必要分を配布した時の合計数」<br />
+							「不足している砂糖の数(赤字)」あるいは「剰余分の砂糖の数」<br />
+							「最も砂糖の所持数が少ないメイドさんの現在の所持数」<br />
+							となっています。
+						</article>
+					</article>
+				</article>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
