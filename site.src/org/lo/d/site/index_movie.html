@@ -12,7 +12,7 @@
 	media="all" />
 </head>
 <body>
-	<div th:fragment="name" th:remove="tag">MOD</div>
+	<div th:fragment="name" th:remove="tag">紹介動画</div>
 	<div layout:fragment="article" th:remove="tag">
 		<div
 			layout:include="(${page.findResourceAsString('elements/sections')}) :: content"
