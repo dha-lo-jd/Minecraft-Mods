@@ -58,6 +58,9 @@
 										th:onclick="'ga(\'send\', \'event\', \'' + ${update.modName} + '\', \'' + ${mcVersion} + '\',\'' + ${update.version} + '\');'"
 										th:text="'Ver ' + ${update.version}">v0.0.2</a><br /> <br />
 								</div>
+								<div
+									th:substituteby="(${page.updates.path} + '/' +  ${page.updates.getUpdate(update.version).fileName}) :: dependency">
+									更新内容</div>
 							</div>
 						</article>
 					</div>
