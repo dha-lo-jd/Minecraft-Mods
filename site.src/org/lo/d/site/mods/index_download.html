@@ -33,6 +33,9 @@
 							<a href="#modfile" th:href="*{fileName}" data-ajax="false"
 								th:onclick="'ga(\'send\', \'event\', \'' + *{modName} + '\', \'' + ${mcVersion} + '\',\'' + *{version} + '\');'"
 								th:text="'Ver ' + *{version}">v0.0.2</a><br />
+							<div
+								th:substituteby="(${page.updates.path} + '/' +  ${page.updates.getUpdate(page.mods.getFirst(mcVersion).version).fileName}) :: dependency">
+								更新内容</div>
 						</article>
 					</div>
 				</article>
